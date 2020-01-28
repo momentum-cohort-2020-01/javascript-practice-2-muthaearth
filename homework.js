@@ -3,6 +3,19 @@
 // For example, `remove(['Cadence', 'Ordel', 'Marion'], 'Marion')` results
 // in `['Cadence', 'Ordel']`.
 //
+  
+function remove(members, potential) { 
+    
+    for(var i = 0; i < num; i++){
+
+
+    // let potential=['Betty']
+    // arr = members + potential
+    if (potential != members) {
+        return arr
+    } else remove.pop()
+}
+
 // If the potential member is not in the array, return the array unchanged.
 // If the potential member is in the array, remove all instances of it from the array.
 
