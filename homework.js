@@ -102,30 +102,24 @@ const arrMin = minimum, => Math.min(...minimum);
 // to see how. This may make more sense to you.
 
 const selectionSort = (num) => {
-var arrayCopy = num.slice(0);
-    for (let i=0; i <= num.length-1; i++) {
-      // find the index of the smallest element
-      let smallestIdx = i
-  
-      for (let j=i; j <= arr.length-1; j++) {
-        if (arr[j] < arr[smallestIdx]) { 
-          smallestIdx = j
-        }
-      }
-  
-      // if current iteration element isn't smallest swap it
-      if (arr[i] > arr[smallestIdx]) {
-        let temp = arr[i]
-        arr[i] = arr[smallestIdx]
-        arr[smallestIdx] = temp
-      }
+    var numCopy = num.slice(0)
+    num.forEach((val, i, arr) => {
+    const smallest = Math.min(...arr.slice(i))
+    const smallestIdx = arr.indexOf(smallest)
+    
+
+    if (arr[i] > arr[smallestIdx]) {
+      const temp = arr[i]
+      arr[i] = arr[smallestIdx]
+      arr[smallestIdx] = temp
     }
-  
-    return arr
-  }
+  })
+  return numCopy
 
 // 7. Create a function called `textList` that takes an array and joins its elements
 // into a string separated by commas.
 //
+
+
 // For example, `textList(['Cadence', 'Ordel', 'Marion'])` results in the string
-// `"Cadence,Ordel,Marion"`.
+// `"Cadence,Ordel,Marion"
